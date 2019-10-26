@@ -1,0 +1,38 @@
+{
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "My webpack template for projects",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config webpack.dev.conf.js",
+    "build": "webpack --config webpack.build.conf.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "https://github.com/moongue",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
