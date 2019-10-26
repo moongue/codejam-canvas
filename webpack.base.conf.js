@@ -18,7 +18,7 @@ module.exports = {
 
     },
     output: {
-        filename: `${PATHS.assets}js/[name].js`,
+        filename: `js/[name].js`,
         path: PATHS.dist,
         publicPath: '/',
     },
@@ -26,6 +26,10 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             loader: 'babel-loader',
+            exclude: '/node_modules'
+        }, {
+            test: /\.json$/,
+            loader: 'json-loader',
             exclude: '/node_modules'
         }, {
             test: /\.(png|jpg|gif|svg)$/,
@@ -43,7 +47,7 @@ module.exports = {
                     options: {sourceMap: true}
                 }, {
                     loader: 'postcss-loader',
-                    options: {sourceMap: true, config: {path: `./src/js/postcss.config.js`}}
+                    options: {sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js`}}
                 }, {
                     loader: 'sass-loader',
                     options: {sourceMap: true}
@@ -59,7 +63,7 @@ module.exports = {
                     options: {sourceMap: true}
                 }, {
                     loader: 'postcss-loader',
-                    options: {sourceMap: true, config: {path: `./src/js/postcss.config.js`}}
+                    options: {sourceMap: true, config: {path: `${PATHS.src}/js/postcss.config.js`}}
                 }
             ]
         }]
@@ -76,6 +80,8 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img`,
+            }, {
+                from: `${PATHS.src}/assets/data`, to: `${PATHS.assets}data`,
             }
         ])
     ]

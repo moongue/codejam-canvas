@@ -25,12 +25,11 @@
     &_active {
       background: darken(#fff, 8);
     }
-    &:nth-child(even){
+    &:nth-child(even) {
       border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     }
   }
 }
-
 .canvas {
   width: 512px;
   height: 512px;
@@ -39,4 +38,9 @@
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%)
+}
+#canvas {
+  width: 512px;
+  height: 512px;
+  image-rendering: pixelated;
 }
