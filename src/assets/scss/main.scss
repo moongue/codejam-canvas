@@ -3,12 +3,21 @@
 @import "utils/vars";
 
 body {
+  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: $standard-color-font;
   background: $white-bg-body;
 }
-
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;

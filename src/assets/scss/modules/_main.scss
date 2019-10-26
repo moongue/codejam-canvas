@@ -1,0 +1,42 @@
+.main {
+  margin: 20px 0;
+  position: relative;
+}
+.panel {
+  max-width: 280px;
+  width: 100%;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  &.small {
+    max-width: 200px;
+  }
+}
+.panel-list {
+  &__item {
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      height: 24px;
+      padding-right: 36px;
+      fill: $standard-color-font;
+    }
+    &_active {
+      background: darken(#fff, 8);
+    }
+    &:nth-child(even){
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.canvas {
+  width: 512px;
+  height: 512px;
+  background: darken(#fff, 8);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%)
+}
