@@ -102,5 +102,12 @@ window.addEventListener('DOMContentLoaded', () => {
        show256x256();
     });
 
+    //Size switcher
+    const rangeSize = document.getElementById('switcher-size');
+    const showSize = document.getElementById('show-size');
 
+    rangeSize.addEventListener('input', (e) => {
+       showSize.value = e.target.value;
+       canvas.style.width = canvas.style.height = e.target.value + 'px';
+    });
 });
