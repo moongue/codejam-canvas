@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
             let target = e.target;
             let parent = target.closest('.panel-list');
             let item = parent.querySelectorAll('.panel-list__item');
-
             if (target.tagName === 'IMG') {
                 let imgParent = target.closest('.panel-list__item');
                 item.forEach((item) => {
