@@ -47,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let choose4x4 = document.getElementById('4x4');
     let choose32x32 = document.getElementById('32x32');
+    let choose256x256 = document.getElementById('256x256');
 
     function show4x4() {
         fetch('../assets/data/4x4.json')
@@ -80,12 +81,25 @@ window.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function show256x256() {
+        let img = new Image();
+        img.addEventListener('load', () => {
+            ctx.drawImage(img,0,0);
+        });
+        img.src="../assets/img/256x256.png";
+        canvas.width = canvas.height = 256;
+    }
+
     choose4x4.addEventListener('click', () => {
         show4x4()
     });
 
     choose32x32.addEventListener('click', () => {
         show32x32()
+    });
+
+    choose256x256.addEventListener('click', () => {
+       show256x256();
     });
 
 
