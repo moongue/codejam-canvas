@@ -1,0 +1,32 @@
+//Utils
+@import "utils/reset";
+@import "utils/vars";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $standard-color-font;
+  background: $white-bg-body;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .panel:nth-child(even) {
+    margin-top: 40px;
+  }
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+//Modules
+@import "modules/header";
+@import "modules/main";
